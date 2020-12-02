@@ -57,12 +57,15 @@ function draw() {
 function keyPressed() {
  if (keyCode === DOWN_ARROW) {
     // Look at the hints in the document and understand how to make the package body fall only on press of the Down arrow key.
-	var ball_options={
-        isStatic:false,
-        restitution:0,
-        density:8
-    }
-    
+	//var ball_options={
+        //isStatic:false,
+        //restitution:0,
+        //density:8
+    //}
+   // Devang, instead of the above options-- These options have to be added when the object is created.. hence not applicable here. 
+    //Here, we will use Matter.Body. properties to change the isStatic property to false
+	 
+	 Matter.Body.setStatic(packageBody,false);
   }
 }
 
